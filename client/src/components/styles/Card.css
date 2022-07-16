@@ -1,0 +1,12 @@
+.card-container {
+  display: grid;
+  grid-template-rows: 2;
+}
+
+p {
+  grid-row: 2 / 2;
+}
+
+p::first-letter {
+  text-transform:capitalize;
+}

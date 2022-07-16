@@ -1,0 +1,17 @@
+.team-list-container {
+  background-color: white;
+  border-radius: 10px;
+  padding-bottom: 30px;
+  margin: 10px 0px 10px 0px;
+  max-height: 100vh;
+  overflow: scroll;
+}
+
+h2 {
+  text-align: center;
+}
+
+#reset-button {
+
+
+}

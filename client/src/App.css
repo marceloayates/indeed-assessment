@@ -1,0 +1,10 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+}
+
+h1 {
+  padding: 10px 10px;
+  margin: 15px 15px;
+}
+

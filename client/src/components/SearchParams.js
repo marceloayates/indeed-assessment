@@ -1,6 +1,9 @@
 import { useState } from "react";
+import usePokemonList from "./usePokemonList.js";
 import Results from "./Results.js"
 import "./styles/SearchParams.css"
+
+const pokemonTypes = ['normal', 'fire', 'water', 'grass', 'flying', 'fighting', 'poison', 'electric', 'ground', 'rock', 'psychic', 'ice', 'bug', 'ghost', 'steel', 'dragon', 'dark', 'fairy']
 
 const SearchParams = ({ handleChoiceSubmit }) => {
   const [pokemon, setPokemon] = useState('')
@@ -8,6 +11,10 @@ const SearchParams = ({ handleChoiceSubmit }) => {
   const [stats, setStats] = useState()
   const [images, setImages] = useState()
   const [types, setTypes] = useState()
+
+  const [type, setType] = useState()
+  const [pokemons] = usePokemonList(type);
+
 
 
   const handleSubmit = (e) => {
@@ -24,16 +31,50 @@ const SearchParams = ({ handleChoiceSubmit }) => {
     setTypes(json.types);
   }
 
+  // async function getPokemonByType() {
+  //   const res = await fetch(`https://pokeapi.co/api/v2/type/${typeInput}`)
+  //   const json = await res.json();
+  //   console.log(json.pokemon)
+  //   setPokemons(json.pokemon)
+  // }
+
   return (
     <div className="search-params-container">
       <form onSubmit={handleSubmit}>
         <label>
+          Type:
+          <select
+            id="type"
+            type="text"
+            value={type}
+            onChange={(e) => {
+              setType(e.target.value)
+              setPokemon('')
+            }}
+          >
+            <option />
+            {pokemonTypes.map((type, index) => (
+              <option key={index} value={type}>
+                {type}
+              </option>
+            ))}
+          </select>
+        </label>
+        <label>
           Pokemon:
-          <input
+          <select
+            id="pokemon"
             type="text"
             value={pokemon}
             onChange={(e) => setPokemon(e.target.value)}
-          />
+          >
+            <option />
+            {pokemons.map((pokemon, index) => (
+              <option key={index} value={pokemon.pokemon.name}>
+                {pokemon.pokemon.name}
+              </option>
+            ))}
+          </select>
         </label>
         <input type="submit" value="Submit"/>
       </form>

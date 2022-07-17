@@ -22,3 +22,4 @@ POST - This route adds the caught pokemon to the json data file by overwritting 
 
 DELETE - This route allows users to release their team by overwritting the file with an empty array
 
+![alt text](https://github.com/marceloayates/indeed-assessment/blob/main/app.png?raw=true)

@@ -43,6 +43,7 @@ function App() {
         <SearchParams handleChoiceSubmit={handleChoiceSubmit}/>
       </header>
       <TeamList choices={choices} handleReset={handleReset}/>
+      <footer>Powered by PokeAPI</footer>
     </div>
   );
 }

@@ -31,9 +31,9 @@ app.post('/pokemon-team', (req, res) => {
       (err) => err && console.error(err)
     );
 
-    res.json({data: dbCopy, message: "POST: Pokemon has been added"})
+    res.json({data: dbCopy, full: false, message: null})
   } else {
-    res.json({data: db, message: "POST: Too many pokemon on team!"})
+    res.json({data: db, full: true, message: "POST: Too many pokemon on team!"})
   }
 })
 

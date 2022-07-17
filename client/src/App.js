@@ -19,7 +19,13 @@ function App() {
       body: e.target.value
     })
     .then(response => response.json())
-    .then((data) => setChoices(data.data))
+    .then((data) => {
+      if (data.full) {
+        alert("Pokemon team is full! Release team to restart")
+      } else {
+        setChoices(data.data)
+      }
+    })
   }
 
   const handleReset = (e) => {

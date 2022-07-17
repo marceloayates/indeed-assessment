@@ -15,6 +15,7 @@ Using App
 7. Click the Release Team button if you would like to start over
 
 Routes
+
 GET - This route retrieves the pokemon team store in the json data file. It will persist when page refreshes.
 
 POST - This route adds the caught pokemon to the json data file by overwritting the file with the input added to the json data.

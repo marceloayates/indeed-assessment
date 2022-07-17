@@ -1,1 +1,26 @@
-[{"name":"metang","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/375.png"},{"name":"metang","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/375.png"},{"name":"metang","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/375.png"},{"name":"metang","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/375.png"},{"name":"metang","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/375.png"},{"name":"metang","sprites":"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/375.png"}]
+[
+  {
+    "name": "Bulbasaur",
+    "sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+  },
+  {
+    "name": "Charizard",
+    "sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png"
+  },
+  {
+    "name": "Pikachu",
+    "sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
+  },
+  {
+    "name": "Mewtwo",
+    "sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png"
+  },
+  {
+    "name": "Dragonite",
+    "sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/149.png"
+  },
+  {
+    "name": "Eevee",
+    "sprites": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png"
+  }
+]

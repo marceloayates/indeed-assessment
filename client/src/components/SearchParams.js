@@ -15,8 +15,6 @@ const SearchParams = ({ handleChoiceSubmit }) => {
   const [type, setType] = useState()
   const [pokemons] = usePokemonList(type);
 
-
-
   const handleSubmit = (e) => {
     e.preventDefault();
     getPokemon();
@@ -31,17 +29,10 @@ const SearchParams = ({ handleChoiceSubmit }) => {
     setTypes(json.types);
   }
 
-  // async function getPokemonByType() {
-  //   const res = await fetch(`https://pokeapi.co/api/v2/type/${typeInput}`)
-  //   const json = await res.json();
-  //   console.log(json.pokemon)
-  //   setPokemons(json.pokemon)
-  // }
-
   return (
     <div className="search-params-container">
       <form onSubmit={handleSubmit}>
-        <label>
+        <label id="type-selector">
           Type:
           <select
             id="type"
@@ -60,7 +51,7 @@ const SearchParams = ({ handleChoiceSubmit }) => {
             ))}
           </select>
         </label>
-        <label>
+        <label id="pokemon-selector">
           Pokemon:
           <select
             id="pokemon"

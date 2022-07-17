@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
-import SearchParams from "./components/SearchParams.js"
-import TeamList from "./components/TeamList.js"
-import './App.css';
+import SearchParams from "./SearchParams.js"
+import TeamList from "./TeamList.js"
+import './styles/App.css';
 
 function App() {
   const [choices, setChoices] = useState([]);

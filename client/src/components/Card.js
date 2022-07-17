@@ -1,6 +1,6 @@
 import "./styles/Card.css"
 
-const Card = ({images, types}) => {
+const Card = ({name, images, types}) => {
 
   return (
     <div>
@@ -8,10 +8,11 @@ const Card = ({images, types}) => {
         null
       ): (
         <div id="card-container">
+          <p>{name}</p>
           <img src={images.front_default} alt=""/>
           <img src={images.front_shiny} alt=""/>
           {types.map((type, index) => (
-            <p key={index}>{type.type.name} </p>
+            <div key={index}>Type: {type.type.name}</div>
           ))}
         </div>
       )}

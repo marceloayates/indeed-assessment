@@ -50,20 +50,4 @@ app.delete('/pokemon-team/', (req, res) => {
 
 })
 
-app.put('/pokemon-team/:id', (req, res) => {
-  const dbCopy = {...db};
-  const id = req.body.id.toString();
-  const newTeamData = req.body.teamMembers;
-  dbCopy[id].teamMembers = newTeamData;
-
-  fs.writeFile(
-    "db/db.json",
-    JSON.stringify(dbCopy),
-    (err) => err && console.error(err)
-  );
-
-  res.json({message: "POST: Build your own pokemon team"})
-  res.json({message: "PUT: Build your own pokemon team"})
-})
-
 

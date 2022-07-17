@@ -1,8 +1,6 @@
 import "./styles/Details.css"
 
 const Details = ({ stats }) => {
-  console.log()
-
   return (
     <div id="pokemon-details">
       <table>

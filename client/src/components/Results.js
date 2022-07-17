@@ -1,20 +1,21 @@
 import Card from "./Card.js";
 import Details from "./Details.js"
+import "./styles/Results.css"
 
-const Results = ({pokemon, images, types, stats, handleChoiceSubmit}) => {
+const Results = ({pokemon, name, images, types, stats, handleChoiceSubmit}) => {
   const pokemonInfo = {
-    "name": pokemon,
+    "name": name,
     "sprites": !images ? null: images.front_default
   }
 
   return (
     <div>
-      <Card images={images} types={types}/>
+      <Card name={name} images={images} types={types}/>
       <Details stats={stats}/>
       {!stats ? (
         null
       ) : (
-        <button value={JSON.stringify(pokemonInfo)} onClick={handleChoiceSubmit}>Add to Team</button>
+        <button id="result-button" value={JSON.stringify(pokemonInfo)} onClick={handleChoiceSubmit}>Catch Pokemon</button>
       )}
     </div>
   )
